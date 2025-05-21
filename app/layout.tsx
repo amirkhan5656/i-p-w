@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "../components/navbar";
+import Navbar from "@/components/navbar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +23,12 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
