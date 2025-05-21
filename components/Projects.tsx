@@ -359,7 +359,7 @@ export default function PortfolioPage() {
         <section className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Have a Project in Mind?</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            I'm always looking for new and exciting projects to work on. Let's discuss how I can help bring your ideas
+            I&apos;m always looking for new and exciting projects to work on. Let&apos;s discuss how I can help bring your ideas
             to life.
           </p>
           <Button size="lg" className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900">

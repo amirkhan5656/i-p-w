@@ -54,7 +54,7 @@ const Contact = () => {
       //   }
     } catch (error) {
       setSubmitError(
-        "There was an error submitting your message. Please try again."
+        "There was an error submitting your message. Please try again." + error
       );
     } finally {
       setIsSubmitting(false);
@@ -70,7 +70,7 @@ const Contact = () => {
           Get in Touch
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Have a project in mind or want to learn more about my services? I'd
+          Have a project in mind or want to learn more about my services? I&apos;d
           love to hear from you. Fill out the form below or use the contact
           information provided.
         </p>
@@ -146,7 +146,7 @@ const Contact = () => {
                     Message Sent Successfully!
                   </h3>
                   <p>
-                    Thank you for reaching out. I'll get back to you as soon as
+                    Thank you for reaching out. I&apos;ll get back to you as soon as
                     possible.
                   </p>
                   <Button
@@ -305,7 +305,7 @@ const Contact = () => {
 
       {/* CTA Section */}
       <section className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Let's Work Together</h2>
+        <h2 className="text-2xl font-bold mb-4">Let&apos;s Work Together</h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
           Whether you have a specific project in mind or just want to explore
           possibilities, I'm here to help turn your ideas into reality.

@@ -22,11 +22,11 @@ export default function AboutPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">About Me</h1>
               <p className="text-lg text-gray-600 mb-6">
-                I'm a passionate digital creator focused on building beautiful, functional websites and applications
+                I&apos;m a passionate digital creator focused on building beautiful, functional websites and applications
                 that solve real problems for businesses and individuals.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                While I'm new to freelancing, I bring fresh perspectives, up-to-date technical knowledge, and a
+                While I&apos;m new to freelancing, I bring fresh perspectives, up-to-date technical knowledge, and a
                 commitment to delivering exceptional results for every client.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <p>
-                    <strong>Dedication to Quality:</strong> I'm committed to delivering high-quality work that meets or
+                    <strong>Dedication to Quality:</strong> I&apos;m committed to delivering high-quality work that meets or
                     exceeds your expectations.
                   </p>
                 </li>
@@ -261,7 +261,7 @@ export default function AboutPage() {
         <section className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            I'm excited to learn about your project and discuss how I can help bring your vision to life.
+            I&apos;m excited to learn about your project and discuss how I can help bring your vision to life.
           </p>
           <Button size="lg" className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900">
             <Mail className="mr-2 h-4 w-4" /> Contact Me

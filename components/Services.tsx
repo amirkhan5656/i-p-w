@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Plus, Minus } from "lucide-react";
+import { CheckCircle, Plus, Minus } from "lucide-react";
 // import { Breadcrumb } from "@/components/breadcrumb"
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -148,7 +148,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="mb-6">
-                <h4 className="font-medium mb-3">What's included:</h4>
+                <h4 className="font-medium mb-3">What&apos;s included:</h4>
                 <ul className="space-y-2">
                   {[
                     "Design Customization",
@@ -541,7 +541,7 @@ export default function ServicesPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Let's discuss how I can help bring your vision to life and create a
+            Let&apos;s discuss how I can help bring your vision to life and create a
             digital solution that meets your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
