@@ -308,7 +308,7 @@ const Contact = () => {
         <h2 className="text-2xl font-bold mb-4">Let&apos;s Work Together</h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
           Whether you have a specific project in mind or just want to explore
-          possibilities, I'm here to help turn your ideas into reality.
+          possibilities, I&apos;m here to help turn your ideas into reality.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Button
