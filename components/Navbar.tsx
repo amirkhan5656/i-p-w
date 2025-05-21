@@ -9,7 +9,7 @@ import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 import { ShimmerButtonDemo } from "./ShimmerButton"
 
-export function Navbar() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
