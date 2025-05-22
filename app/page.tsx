@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <main>
       <HeroSection/>
-      <PortfolioPage/>
       <AboutPage/>
       <Contact/>
       <ServicesPage/>
+      <PortfolioPage/>
 
     </main>
   )

@@ -11,28 +11,42 @@ export default function AboutPage() {
       <div className="container mx-auto max-w-6xl">
         {/* Hero Section */}
         <section className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/placeholder.svg?height=800&width=600"
-                alt="Professional headshot"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="">
+          <div className="container mx-auto px-6 md:px-8">
+            <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                 About Me
               </h1>
               <p className="text-lg mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-                I&apos;m a passionate digital creator focused on building
-                beautiful, functional websites and applications that solve real
-                problems for businesses and individuals.
+                I&apos;m a{" "}
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  passionate digital creator
+                </span>{" "}
+                focused on building
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  {" "}
+                  beautiful, functional websites
+                </span>{" "}
+                and applications that solve{" "}
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  real problems
+                </span>{" "}
+                for businesses and individuals.
               </p>
               <p className="text-lg mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-                While I&apos;m new to freelancing, I bring fresh perspectives,
-                up-to-date technical knowledge, and a commitment to delivering
-                exceptional results for every client.
+                While I&apos;m new to freelancing, I bring{" "}
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  fresh perspectives
+                </span>
+                ,
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  {" "}
+                  up-to-date technical knowledge
+                </span>
+                , and a{" "}
+                <span className="underline decoration-primary decoration-2 underline-offset-2">
+                  commitment to delivering exceptional results
+                </span>{" "}
+                for every client.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button

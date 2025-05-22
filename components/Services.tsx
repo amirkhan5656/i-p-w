@@ -388,7 +388,7 @@ export default function ServicesPage() {
         </section>
 
         {/* process-steps */}
-        <section className="py-12 bg-card">
+        <section className="py-12 bg-card rounded-lg">
           <div className="container mx-auto px-6 md:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">
               How It Works
@@ -401,7 +401,7 @@ export default function ServicesPage() {
                   <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
                     <FileText className="w-7 h-7" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-background flex items-center justify-center font-bold">
                     1
                   </div>
                 </div>
@@ -412,9 +412,6 @@ export default function ServicesPage() {
                   Submit revamp or create a new website order with your
                   requirements
                 </p>
-
-                {/* Desktop connector line - only visible on md screens and up */}
-                <div className="hidden md:block absolute right-0 top-1/2 w-1/4 h-0.5 bg-border"></div>
               </div>
 
               {/* Step 2 */}
@@ -423,7 +420,7 @@ export default function ServicesPage() {
                   <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
                     <CreditCard className="w-7 h-7" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-background flex items-center justify-center font-bold">
                     2
                   </div>
                 </div>
@@ -441,7 +438,7 @@ export default function ServicesPage() {
                   <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
                     <Globe className="w-7 h-7" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-background flex items-center justify-center font-bold">
                     3
                   </div>
                 </div>
