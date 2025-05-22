@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { ShimmerButtonDemo } from "./ShimmerButton";
 

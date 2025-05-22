@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 import {
   SiReact,
   SiNextdotjs,
@@ -18,15 +18,21 @@ import {
   SiGithub,
   SiDocker,
   SiFigma,
-} from "react-icons/si"
-import { MdDevices, MdAccessibility, MdSearch, MdDesignServices, MdAutoFixHigh } from "react-icons/md"
-import { VscGithubAction } from "react-icons/vsc"
-import { motion } from "framer-motion"
+} from "react-icons/si";
+import {
+  MdDevices,
+  MdAccessibility,
+  MdSearch,
+  MdDesignServices,
+  MdAutoFixHigh,
+} from "react-icons/md";
+import { VscGithubAction } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 interface TechIconProps {
-  icon: string
-  isAnimating: boolean
-  className?: string
+  icon: string;
+  isAnimating: boolean;
+  className?: string;
 }
 
 export function TechIcon({ icon, isAnimating, className }: TechIconProps) {
@@ -51,7 +57,7 @@ export function TechIcon({ icon, isAnimating, className }: TechIconProps) {
     accessibility: <MdAccessibility className="text-[#16A34A]" />,
     seo: <MdSearch className="text-[#EF4444]" />,
     uiux: <MdDesignServices className="text-[#F59E0B]" />,
-  }
+  };
 
   const animationVariants = {
     react: {
@@ -134,18 +140,23 @@ export function TechIcon({ icon, isAnimating, className }: TechIconProps) {
       rotate: isAnimating ? [0, 10, -10, 0] : 0,
       transition: { duration: 0.5 },
     },
-  }
+  };
 
   const defaultAnimation = {
     scale: isAnimating ? [1, 1.2, 1] : 1,
     transition: { duration: 0.5 },
-  }
+  };
 
-  const animation = (animationVariants as any)[icon] || defaultAnimation
+//   const animation = (animationVariants as any)[icon] || defaultAnimation;
+  const animation = (icon in animationVariants
+  ? animationVariants[icon as keyof typeof animationVariants]
+  : defaultAnimation
+);
+
 
   return (
     <motion.div className={cn("text-2xl", className)} animate={animation}>
       {iconMap[icon] || <MdAutoFixHigh className="text-gray-400" />}
     </motion.div>
-  )
+  );
 }
