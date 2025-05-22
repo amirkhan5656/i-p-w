@@ -57,51 +57,6 @@ export default function ServicesPage() {
       <div className="container mx-auto max-w-6xl">
         {/* <Breadcrumb /> */}
 
-        {/* Hero Section */}
-        <section className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-                Services & Solutions
-              </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                I offer a range of digital services designed to help your
-                business establish a strong online presence, engage with your
-                audience, and achieve your goals.
-              </p>
-              <Button
-                size="lg"
-                className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200 transition-all duration-300 group relative overflow-hidden shadow-lg hover:shadow-xl"
-              >
-                <span className="absolute inset-0 w-0 bg-gradient-to-r from-gray-700 to-gray-800 dark:from-gray-200 dark:to-gray-100 transition-all duration-300 group-hover:w-full"></span>
-                <span className="relative flex items-center justify-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Get a Free Consultation
-                </span>
-              </Button>
-            </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/placeholder.svg?height=800&width=600"
-                alt="Services illustration"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-4 text-center">My Services</h2>

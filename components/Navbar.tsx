@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold transition-colors">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-              YourName
+              Ihtesham.
             </span>
           </Link>
 
