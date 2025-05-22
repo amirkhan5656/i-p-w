@@ -9,6 +9,7 @@ import { CheckCircle, Plus, Minus } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
+import { FileText, CreditCard, Globe } from "lucide-react";
 
 export default function ServicesPage() {
   // State for custom plan calculator
@@ -61,10 +62,12 @@ export default function ServicesPage() {
 
         {/* Pricing Section */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-4 text-center">My Services</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Your Idea, Our Execution
+          </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-center mb-12">
-            Choose our standard package or build your own custom solution with
-            our interactive pricing calculator.
+            From concept to code, select a plan or customize everything—your
+            call.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -374,18 +377,85 @@ export default function ServicesPage() {
             </Card>
           </div>
 
-          <div className="text-center mt-8">
+          {/* <div className="text-center mt-8">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Need something more specific? Contact me for a personalized quote.
             </p>
             <Button variant="link" size="lg" asChild>
               <Link href="/contact">Request a Custom Quote</Link>
             </Button>
+          </div> */}
+        </section>
+
+        {/* process-steps */}
+        <section className="py-12 bg-card">
+          <div className="container mx-auto px-6 md:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              How It Works
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
+                    <FileText className="w-7 h-7" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Submit Your Order
+                </h3>
+                <p className="text-muted-foreground">
+                  Submit revamp or create a new website order with your
+                  requirements
+                </p>
+
+                {/* Desktop connector line - only visible on md screens and up */}
+                <div className="hidden md:block absolute right-0 top-1/2 w-1/4 h-0.5 bg-border"></div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
+                    <CreditCard className="w-7 h-7" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Make Secure Payment
+                </h3>
+                <p className="text-muted-foreground">
+                  Complete your order with our secure payment process
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
+                    <Globe className="w-7 h-7" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Get Your Website</h3>
+                <p className="text-muted-foreground">
+                  Receive your revamped or brand new website ready to launch
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gray-900 dark:bg-gray-800 text-white p-12 rounded-lg text-center">
+        <section className="mt-12 bg-gray-900 dark:bg-gray-800 text-white p-12 rounded-lg text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Your Project?
           </h2>

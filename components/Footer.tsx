@@ -92,9 +92,9 @@ export default function Footer() {
         <div className="mt-8 border-t border-border pt-6">
           <div className="max-w-md mx-auto text-center mb-6">
             <h3 className="text-lg font-semibold mb-2">Looking for something unique?</h3>
-            <p className="text-muted-foreground mb-2">We'd love to hear from you!</p>
+            <p className="text-muted-foreground mb-2">We&apos;d love to hear from you!</p>
             <p className="text-sm text-muted-foreground">
-              Tell us about your project, and let's see if we're the perfect fit to bring your exceptional vision to
+              Tell us about your project, and let&apos;s see if we&apos;re the perfect fit to bring your exceptional vision to
               life.
             </p>
           </div>

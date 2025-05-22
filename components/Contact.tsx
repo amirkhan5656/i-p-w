@@ -66,10 +66,10 @@ const Contact = () => {
 
       {/* Hero Section */}
       <section className="mb-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
           Get in Touch
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg max-w-2xl mx-auto bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
           Have a project in mind or want to learn more about my services?
           I&apos;d love to hear from you. Fill out the form below or use the
           contact information provided.
