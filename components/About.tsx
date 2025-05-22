@@ -1,13 +1,14 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Download, Github, Linkedin, Mail } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardTitle, CardHeader, CardContent } from "@/components/ui/card";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
+import { SkillsList } from "./skills-list";
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <main id="about" className="flex min-h-screen flex-col py-12 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl">
-
         {/* Hero Section */}
         <section className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -19,24 +20,40 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">About Me</h1>
-              <p className="text-lg text-gray-600 mb-6">
-                I&apos;m a passionate digital creator focused on building beautiful, functional websites and applications
-                that solve real problems for businesses and individuals.
+            <div className="">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                About Me
+              </h1>
+              <p className="text-lg mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                I&apos;m a passionate digital creator focused on building
+                beautiful, functional websites and applications that solve real
+                problems for businesses and individuals.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
-                While I&apos;m new to freelancing, I bring fresh perspectives, up-to-date technical knowledge, and a
-                commitment to delivering exceptional results for every client.
+              <p className="text-lg mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                While I&apos;m new to freelancing, I bring fresh perspectives,
+                up-to-date technical knowledge, and a commitment to delivering
+                exceptional results for every client.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
                   <Download className="h-4 w-4" /> Download Resume
                 </Button>
-                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
                   <Linkedin className="h-4 w-4" /> LinkedIn
                 </Button>
-                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
                   <Github className="h-4 w-4" /> GitHub
                 </Button>
               </div>
@@ -46,108 +63,244 @@ export default function AboutPage() {
 
         {/* Skills Section */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">My Skills & Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Web Development</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  HTML5, CSS3, JavaScript (ES6+)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  React.js, Next.js
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Responsive Design
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Tailwind CSS, SASS
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  API Integration
-                </li>
-              </ul>
+          <h2 className="text-3xl font-bold mb-8">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+              My Skills & Learning Journey
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1: Frontend */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold pb-2 border-b border-gray-200 dark:border-gray-700 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                  Frontend Technologies
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pb-6">
+                <SkillsList
+                  skills={[
+                    {
+                      name: "React",
+                      icon: "react",
+                      description: "Component-based UI development",
+                    },
+                    {
+                      name: "Next.js",
+                      icon: "nextjs",
+                      description: "React framework for production",
+                    },
+                    {
+                      name: "TypeScript",
+                      icon: "typescript",
+                      description: "Type-safe JavaScript",
+                    },
+                    {
+                      name: "Tailwind CSS",
+                      icon: "tailwind",
+                      description: "Utility-first CSS framework",
+                    },
+                  ]}
+                />
+              </CardContent>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Design</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  UI/UX Design
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Figma, Adobe XD
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Wireframing & Prototyping
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Visual Design
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Brand Identity
-                </li>
-              </ul>
+
+            {/* Card 2: Backend + Deployment */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold pb-2 border-b border-gray-200 dark:border-gray-700 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                  Backend & Database
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SkillsList
+                  skills={[
+                    {
+                      name: "Node.js",
+                      icon: "nodejs",
+                      description: "JavaScript runtime",
+                    },
+                    {
+                      name: "Supabase",
+                      icon: "supabase",
+                      description: "Open source Firebase alternative",
+                    },
+                    {
+                      name: "NeonDB",
+                      icon: "neondb",
+                      description: "Advanced relational database",
+                    },
+                  ]}
+                />
+              </CardContent>
+
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold pb-2 border-b border-gray-200 dark:border-gray-700 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                  Development & Deployment
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SkillsList
+                  skills={[
+                    {
+                      name: "Vercel",
+                      icon: "vercel",
+                      description: "Deployment platform",
+                    },
+                  ]}
+                />
+              </CardContent>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Other Skills</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  SEO Fundamentals
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Content Management Systems
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Version Control (Git)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Project Management
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-gray-900 rounded-full"></span>
-                  Technical Problem Solving
-                </li>
-              </ul>
+
+            {/* Card 3: Good Practices */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold pb-2 border-b border-gray-200 dark:border-gray-700 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                  Good Practices
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <SkillsList
+                  skills={[
+                    {
+                      name: "Figma",
+                      icon: "figma",
+                      description: "Design and prototyping tool",
+                    },
+                    {
+                      name: "Responsive Design",
+                      icon: "responsive",
+                      description: "Multi-device compatibility",
+                    },
+                    {
+                      name: "Accessibility",
+                      icon: "accessibility",
+                      description: "WCAG compliance",
+                    },
+                    {
+                      name: "SEO",
+                      icon: "seo",
+                      description: "Search engine optimization",
+                    },
+                    {
+                      name: "UI/UX",
+                      icon: "uiux",
+                      description: "User-centered design",
+                    },
+                  ]}
+                />
+              </CardContent>
             </Card>
           </div>
         </section>
 
         {/* Education & Training */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-8">Education & Training</h2>
-          <div className="space-y-8">
-            <div className="border-l-4 border-gray-200 pl-6 py-2">
-              <h3 className="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
-              <p className="text-gray-600">University Name, 2018-2022</p>
-              <p className="mt-2">
-                Focused on web development, user interface design, and software engineering principles.
-              </p>
-            </div>
-            <div className="border-l-4 border-gray-200 pl-6 py-2">
-              <h3 className="text-xl font-semibold">Advanced Web Development Certification</h3>
-              <p className="text-gray-600">Online Learning Platform, 2023</p>
-              <p className="mt-2">Comprehensive training in modern web development technologies and best practices.</p>
-            </div>
-            <div className="border-l-4 border-gray-200 pl-6 py-2">
-              <h3 className="text-xl font-semibold">UI/UX Design Fundamentals</h3>
-              <p className="text-gray-600">Design Institute, 2023</p>
-              <p className="mt-2">
-                Learned principles of user-centered design, wireframing, prototyping, and usability testing.
-              </p>
+        <section className="py-12">
+          <h2 className="text-3xl font-bold tracking-tight mb-8">
+            Educational Journey
+          </h2>
+
+          <div className="space-y-12">
+            {/* Timeline structure for education */}
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-primary/80 to-primary/20"></div>
+
+              {/* Education entry */}
+              <div className="relative pl-8 pb-2">
+                {/* Timeline node */}
+                <div className="absolute left-[-8px] top-1 h-4 w-4 rounded-full bg-primary"></div>
+
+                <div className="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+                  <div className="flex items-center gap-2 text-primary mb-2">
+                    <GraduationCap className="h-5 w-5" />
+                    <h3 className="text-xl font-semibold">
+                      Bachelor of Science in Computer Science
+                    </h3>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
+                      <div className="flex items-center gap-1.5">
+                        <MapPin className="h-4 w-4" />
+                        <span>University Name</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="h-4 w-4" />
+                        <span>2018–2022</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2">
+                      <h4 className="font-medium mb-2 flex items-center gap-1.5">
+                        <Award className="h-4 w-4 text-primary" />
+                        <span>Focus Areas</span>
+                      </h4>
+                      <p className="text-muted-foreground">
+                        Web development, user interface design, and software
+                        engineering principles.
+                      </p>
+                    </div>
+
+                    {/* Additional achievements or courses can be added here */}
+                    <div className="pt-2 border-t border-border/50 mt-4">
+                      <h4 className="font-medium mb-2">Notable Coursework</h4>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                        <li className="flex items-center gap-1.5">
+                          <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                          <span>Advanced Algorithms</span>
+                        </li>
+                        <li className="flex items-center gap-1.5">
+                          <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                          <span>Database Systems</span>
+                        </li>
+                        <li className="flex items-center gap-1.5">
+                          <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                          <span>Human-Computer Interaction</span>
+                        </li>
+                        <li className="flex items-center gap-1.5">
+                          <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+                          <span>Software Engineering</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* You can add more education entries following the same pattern */}
+              {/* <div className="relative pl-8 pb-2">
+                <div className="absolute left-[-8px] top-1 h-4 w-4 rounded-full bg-primary/70"></div>
+
+                <div className="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
+                  <div className="flex items-center gap-2 text-primary mb-2">
+                    <GraduationCap className="h-5 w-5" />
+                    <h3 className="text-xl font-semibold">
+                      High School Diploma
+                    </h3>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
+                      <div className="flex items-center gap-1.5">
+                        <MapPin className="h-4 w-4" />
+                        <span>High School Name</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="h-4 w-4" />
+                        <span>2014–2018</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2">
+                      <p className="text-muted-foreground">
+                        Graduated with honors, participated in computer science
+                        club and robotics team.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -156,13 +309,17 @@ export default function AboutPage() {
         <section className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Work Together?</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-            I&apos;m excited to learn about your project and discuss how I can help bring your vision to life.
+            I&apos;m excited to learn about your project and discuss how I can
+            help bring your vision to life.
           </p>
-          <Button size="lg" className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900">
+          <Button
+            size="lg"
+            className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900"
+          >
             <Mail className="mr-2 h-4 w-4" /> Contact Me
           </Button>
         </section>
       </div>
     </main>
-  )
+  );
 }

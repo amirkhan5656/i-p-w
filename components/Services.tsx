@@ -444,7 +444,7 @@ export default function ServicesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <h2 className="text-3xl font-bold mb-12 text-center">
             Frequently Asked Questions
           </h2>
@@ -487,7 +487,7 @@ export default function ServicesPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="bg-gray-900 dark:bg-gray-800 text-white p-12 rounded-lg text-center">

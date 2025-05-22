@@ -96,7 +96,7 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-gray-900 dark:text-gray-100 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
@@ -119,7 +119,7 @@ const Contact = () => {
                       Available for remote work worldwide
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex items-start gap-4">
                   <Clock className="h-6 w-6 text-gray-900 dark:text-gray-100 flex-shrink-0 mt-1" />
                   <div>
