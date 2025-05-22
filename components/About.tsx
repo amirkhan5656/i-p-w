@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardTitle, CardHeader, CardContent } from "@/components/ui/card";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
