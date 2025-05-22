@@ -196,7 +196,7 @@ export default function AboutPage() {
 
         {/* Education & Training */}
         <section className="py-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-8">
+          <h2 className="text-3xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
             Educational Journey
           </h2>
 
@@ -207,33 +207,35 @@ export default function AboutPage() {
               <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-primary/80 to-primary/20"></div>
 
               {/* Education entry */}
-              <div className="relative pl-8 pb-2">
+              <div className="relative pl-6 sm:pl-8 pb-2">
                 {/* Timeline node */}
                 <div className="absolute left-[-8px] top-1 h-4 w-4 rounded-full bg-primary"></div>
 
                 <div className="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
                   <div className="flex items-center gap-2 text-primary mb-2">
-                    <GraduationCap className="h-5 w-5" />
+                    <GraduationCap className="h-5 w-5 flex-shrink-0" />
                     <h3 className="text-xl font-semibold">
                       Bachelor of Science in Computer Science
                     </h3>
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
-                      <div className="flex items-center gap-1.5">
-                        <MapPin className="h-4 w-4" />
-                        <span>University Name</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="h-4 w-4" />
-                        <span>2018–2022</span>
+                    <div className="space-y-3 md:space-y-0">
+                      <div className="flex flex-col md:flex-row md:flex-wrap md:gap-x-6 md:gap-y-2 text-muted-foreground">
+                        <div className="flex items-center gap-1.5 mb-2 md:mb-0">
+                          <MapPin className="h-4 w-4 flex-shrink-0" />
+                          <span>University Name</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="h-4 w-4 flex-shrink-0" />
+                          <span>2018–2022</span>
+                        </div>
                       </div>
                     </div>
 
                     <div className="pt-2">
                       <h4 className="font-medium mb-2 flex items-center gap-1.5">
-                        <Award className="h-4 w-4 text-primary" />
+                        <Award className="h-4 w-4 flex-shrink-0 text-primary" />
                         <span>Focus Areas</span>
                       </h4>
                       <p className="text-muted-foreground">
@@ -245,7 +247,7 @@ export default function AboutPage() {
                     {/* Additional achievements or courses can be added here */}
                     <div className="pt-2 border-t border-border/50 mt-4">
                       <h4 className="font-medium mb-2">Notable Coursework</h4>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 text-sm text-muted-foreground">
                         <li className="flex items-center gap-1.5">
                           <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
                           <span>Advanced Algorithms</span>
@@ -269,26 +271,28 @@ export default function AboutPage() {
               </div>
 
               {/* You can add more education entries following the same pattern */}
-              {/* <div className="relative pl-8 pb-2">
+              <div className="relative pl-6 sm:pl-8 pb-2">
                 <div className="absolute left-[-8px] top-1 h-4 w-4 rounded-full bg-primary/70"></div>
 
                 <div className="rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:shadow-md">
                   <div className="flex items-center gap-2 text-primary mb-2">
-                    <GraduationCap className="h-5 w-5" />
+                    <GraduationCap className="h-5 w-5 flex-shrink-0" />
                     <h3 className="text-xl font-semibold">
                       High School Diploma
                     </h3>
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex flex-wrap gap-x-6 gap-y-2 text-muted-foreground">
-                      <div className="flex items-center gap-1.5">
-                        <MapPin className="h-4 w-4" />
-                        <span>High School Name</span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="h-4 w-4" />
-                        <span>2014–2018</span>
+                    <div className="space-y-3 md:space-y-0">
+                      <div className="flex flex-col md:flex-row md:flex-wrap md:gap-x-6 md:gap-y-2 text-muted-foreground">
+                        <div className="flex items-center gap-1.5 mb-2 md:mb-0">
+                          <MapPin className="h-4 w-4 flex-shrink-0" />
+                          <span>High School Name</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="h-4 w-4 flex-shrink-0" />
+                          <span>2014–2018</span>
+                        </div>
                       </div>
                     </div>
 
@@ -300,7 +304,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </section>

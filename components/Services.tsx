@@ -52,7 +52,10 @@ export default function ServicesPage() {
   }, [pages, revisions, deliveryDays, features]);
 
   return (
-    <main id="hire-me" className="flex min-h-screen flex-col py-12 px-4 md:px-8">
+    <main
+      id="hire-me"
+      className="flex min-h-screen flex-col py-12 px-4 md:px-8"
+    >
       <div className="container mx-auto max-w-6xl">
         {/* <Breadcrumb /> */}
 
@@ -122,7 +125,6 @@ export default function ServicesPage() {
 
               <Button className="w-full">Select Basic Plan</Button>
             </Card>
-            
 
             {/* Custom Plan with Calculator */}
             <Card className="p-6 h-full">
@@ -382,136 +384,38 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            My Working Process
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                step: "01",
-                title: "Discovery",
-                description:
-                  "I learn about your business, goals, and requirements to understand your needs.",
-              },
-              {
-                step: "02",
-                title: "Planning",
-                description:
-                  "Together we develop a strategic plan and timeline for your project.",
-              },
-              {
-                step: "03",
-                title: "Creation",
-                description:
-                  "I design and develop your solution with regular updates and feedback.",
-              },
-              {
-                step: "04",
-                title: "Launch",
-                description:
-                  "Your project goes live with my support to ensure everything runs smoothly.",
-              },
-            ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="text-6xl font-bold text-gray-100 dark:text-gray-800 mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {step.description}
-                </p>
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-10 right-0 transform translate-x-1/2">
-                    <svg
-                      width="40"
-                      height="12"
-                      viewBox="0 0 40 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M39.5303 6.53033C39.8232 6.23744 39.8232 5.76256 39.5303 5.46967L34.7574 0.696699C34.4645 0.403806 33.9896 0.403806 33.6967 0.696699C33.4038 0.989593 33.4038 1.46447 33.6967 1.75736L37.9393 6L33.6967 10.2426C33.4038 10.5355 33.4038 11.0104 33.6967 11.3033C33.9896 11.5962 34.4645 11.5962 34.7574 11.3033L39.5303 6.53033ZM0 6.75H39V5.25H0V6.75Z"
-                        fill="#D1D5DB"
-                      />
-                    </svg>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        {/* <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                question: "How long does it take to complete a website?",
-                answer:
-                  "The timeline varies depending on the complexity of the project. A basic website typically takes 2-4 weeks, while more complex projects with custom functionality may take 6-12 weeks. I'll provide a detailed timeline during our initial consultation.",
-              },
-              {
-                question: "Do you provide website maintenance services?",
-                answer:
-                  "Yes, I offer website maintenance packages to keep your site secure, updated, and running smoothly. This includes regular updates, security monitoring, backups, and technical support.",
-              },
-              {
-                question: "What is your payment structure?",
-                answer:
-                  "I typically require a 50% deposit to begin work, with the remaining balance due upon project completion. For larger projects, I can arrange milestone-based payments. All payment terms are clearly outlined in our contract.",
-              },
-              {
-                question: "Do you work with clients remotely?",
-                answer:
-                  "Yes, I work with clients worldwide. We can communicate via email, phone, video calls, and project management tools to ensure clear communication throughout the project.",
-              },
-              {
-                question: "Will I be able to update my website myself?",
-                answer:
-                  "Yes, I can build your website with a user-friendly content management system (CMS) that allows you to easily update content, add pages, and make basic changes without technical knowledge.",
-              },
-              {
-                question: "What information do you need to get started?",
-                answer:
-                  "To get started, I'll need information about your business, your goals for the project, your target audience, any design preferences, and examples of websites you like. I'll provide a detailed questionnaire to guide this process.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="border-b dark:border-gray-700 pb-6">
-                <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </section> */}
-
         {/* CTA Section */}
         <section className="bg-gray-900 dark:bg-gray-800 text-white p-12 rounded-lg text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Your Project?
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Let&apos;s discuss how I can help bring your vision to life and create a
-            digital solution that meets your needs.
+            Ready to transform your online presence? Select below to begin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100"
-            >
-              Schedule a Consultation
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-gray-800"
-            >
-              View My Portfolio
-            </Button>
+            <div className="flex flex-col gap-2">
+              <span className="text-sm font-medium text-gray-300">
+                Already have a site?
+              </span>
+              <Button
+                size="lg"
+                className="bg-white text-gray-900 hover:bg-gray-100"
+              >
+                Revamp My Website
+              </Button>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-sm font-medium text-gray-300">
+                Starting from zero?
+              </span>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-gray-800 bg-transparent"
+              >
+                Build My New Website
+              </Button>
+            </div>
           </div>
         </section>
       </div>

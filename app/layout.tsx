@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             <Navbar />
             {children}
+            <Footer/>
           </TooltipProvider>
         </ThemeProvider>
       </body>
