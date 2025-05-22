@@ -1,61 +1,62 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu, X, Sun, Moon } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useTheme } from "next-themes"
-import { cn } from "@/lib/utils"
-import { ShimmerButtonDemo } from "./ShimmerButton"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
+import { ShimmerButtonDemo } from "./ShimmerButton";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
-  const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+  const { theme, setTheme } = useTheme();
 
   // Only render theme toggle after mounting to avoid hydration mismatch
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => setIsOpen(false)
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark"
-    console.log("Changing theme from", theme, "to", newTheme)
-    setTheme(newTheme)
-  }
+    const newTheme = theme === "dark" ? "light" : "dark";
+    console.log("Changing theme from", theme, "to", newTheme);
+    setTheme(newTheme);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/contact", label: "Contact" },
-  ]
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#portfolio", label: "Portfolio" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5",
+        isScrolled
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-8">
@@ -74,7 +75,9 @@ export default function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-gray-900 dark:hover:text-white relative group",
-                  pathname === link.href ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300",
+                  pathname === link.href
+                    ? "text-gray-900 dark:text-white"
+                    : "text-gray-600 dark:text-gray-300"
                 )}
               >
                 {link.label}
@@ -94,7 +97,12 @@ export default function Navbar() {
                 <span className="sr-only">Toggle theme</span>
               </Button>
             )}
-            <ShimmerButtonDemo>
+            <ShimmerButtonDemo
+              onClick={() => {
+                const section = document.getElementById("hire-me");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Hire Me
             </ShimmerButtonDemo>
           </nav>
@@ -114,8 +122,17 @@ export default function Navbar() {
                 <span className="sr-only">Toggle theme</span>
               </Button>
             )}
-            <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -132,18 +149,18 @@ export default function Navbar() {
                 onClick={closeMenu}
                 className={cn(
                   "py-2 text-base font-medium transition-colors hover:text-gray-900 dark:hover:text-white",
-                  pathname === link.href ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300",
+                  pathname === link.href
+                    ? "text-gray-900 dark:text-white"
+                    : "text-gray-600 dark:text-gray-300"
                 )}
               >
                 {link.label}
               </Link>
             ))}
-            <ShimmerButtonDemo>
-              Hire Me
-            </ShimmerButtonDemo>
+            <ShimmerButtonDemo>Hire Me</ShimmerButtonDemo>
           </nav>
         </div>
       )}
     </header>
-  )
+  );
 }

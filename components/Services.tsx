@@ -53,7 +53,7 @@ export default function ServicesPage() {
   }, [pages, revisions, deliveryDays, features]);
 
   return (
-    <main className="flex min-h-screen flex-col py-12 px-4 md:px-8">
+    <main id="hire-me" className="flex min-h-screen flex-col py-12 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl">
         {/* <Breadcrumb /> */}
 

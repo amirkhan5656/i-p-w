@@ -61,7 +61,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="container mx-auto max-w-6xl">
+    <div id="contact" className="container mx-auto max-w-6xl">
       {/* <Breadcrumb /> */}
 
       {/* Hero Section */}
@@ -70,9 +70,9 @@ const Contact = () => {
           Get in Touch
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Have a project in mind or want to learn more about my services? I&apos;d
-          love to hear from you. Fill out the form below or use the contact
-          information provided.
+          Have a project in mind or want to learn more about my services?
+          I&apos;d love to hear from you. Fill out the form below or use the
+          contact information provided.
         </p>
       </section>
 
@@ -146,8 +146,8 @@ const Contact = () => {
                     Message Sent Successfully!
                   </h3>
                   <p>
-                    Thank you for reaching out. I&apos;ll get back to you as soon as
-                    possible.
+                    Thank you for reaching out. I&apos;ll get back to you as
+                    soon as possible.
                   </p>
                   <Button
                     className="mt-4"
@@ -212,42 +212,36 @@ const Contact = () => {
                       {submitError}
                     </div>
                   )}
-                  <ShimmerButtonDemo>
-                    <Button
-                      type="submit"
-                      className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900 w-full md:w-auto"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <svg
-                            className="animate-spin -ml-1 mr-2 h-4 w-4 text-white dark:text-gray-900"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <circle
-                              className="opacity-25"
-                              cx="12"
-                              cy="12"
-                              r="10"
-                              stroke="currentColor"
-                              strokeWidth="4"
-                            ></circle>
-                            <path
-                              className="opacity-75"
-                              fill="currentColor"
-                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                          </svg>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="mr-2 h-4 w-4" /> Send Message
-                        </>
-                      )}
-                    </Button>
+                  <ShimmerButtonDemo type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <svg
+                          className="animate-spin -ml-1 mr-2 h-4 w-4 text-white dark:text-gray-900"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 h-4 w-4" /> Send Message
+                      </>
+                    )}
                   </ShimmerButtonDemo>
                 </form>
               )}

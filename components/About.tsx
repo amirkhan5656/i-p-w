@@ -5,7 +5,7 @@ import { Download, Github, Linkedin, Mail } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <main className="flex min-h-screen flex-col py-12 px-4 md:px-8">
+    <main id="about" className="flex min-h-screen flex-col py-12 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl">
 
         {/* Hero Section */}

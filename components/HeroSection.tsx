@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background">
+    <div id="home" className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background">
         <section className="relative bg-white dark:bg-gray-950 py-20 px-4 md:px-8 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-[10%] -right-[10%] w-[500px] h-[500px] bg-gradient-to-br from-gray-100 to-transparent dark:from-gray-800/20 dark:to-transparent rounded-full blur-3xl opacity-60 animate-blob"></div>

@@ -79,7 +79,7 @@ export default function PortfolioPage() {
   ]
 
   return (
-    <main className="flex min-h-screen flex-col py-12 px-4 md:px-8">
+    <main id="portfolio" className="flex min-h-screen flex-col py-12 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl">
         {/* <Breadcrumb /> */}
 
@@ -102,7 +102,7 @@ export default function PortfolioPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative h-64 md:h-full">
                       <Image
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || "/placeholder.svg?height=800&width=600"}
                         alt={project.title}
                         fill
                         className="object-cover"
