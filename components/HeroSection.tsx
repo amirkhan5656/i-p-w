@@ -37,7 +37,7 @@ export function HeroSection() {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-normal">
-              Whether you're starting from scratch or refreshing an old website, I create tailored web solutions that
+              Whether you&apos;re starting from scratch or refreshing an old website, I create tailored web solutions that
               are modern, responsive, and scalable.
             </p>
 
