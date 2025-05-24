@@ -130,7 +130,7 @@ export default function Home() {
       <HeroSection />
       <div className="mx-auto max-w-6xl">
         {/* About Me Section */}
-        <section id="about" className="">
+        <section id="about" className="mx-2">
           {/* Hero Section */}
           <div className="container mx-auto mb-20">
             <div className="max-w-3xl">
@@ -195,7 +195,7 @@ export default function Home() {
             </div>
           </div>
           {/* Skills Section */}
-          <div className="container mb-10">
+          <div className="mb-10">
             <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
               My Skills & Learning Journey
             </h2>
@@ -325,7 +325,7 @@ export default function Home() {
             </div>
           </div>
           {/* Education & Training */}
-          <div className="container py-12 mb-10">
+          <div className="py-12 mb-10">
             <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
               Educational Journey
             </h2>
@@ -454,7 +454,7 @@ export default function Home() {
           </div>
         </section>
         {/* Contact Section */}
-        <section id="contact" className="">
+        <section id="contact" className="mx-2">
           {/* Hero Section */}
           <div className="container mx-auto mb-20">
             <div className="max-w-3xl">
@@ -645,7 +645,7 @@ export default function Home() {
           </div>
         </section>
         {/* Services Section */}
-        <section id="services" className="">
+        <section id="services" className="mx-2">
           {/* Service Hero Section */}
           <div className="container mx-auto mb-20">
             <div className="max-w-3xl">
@@ -1073,7 +1073,7 @@ export default function Home() {
             {/* <Breadcrumb /> */}
 
             {/* Hero Section */}
-            <section className="mb-16 text-center">
+            <section className="mb-16 text-center mx-2">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                 My Portfolio
               </h1>
@@ -1084,7 +1084,7 @@ export default function Home() {
             </section>
 
             {/* All Projects */}
-            <section className="mb-20">
+            <section className="mb-20 mx-2">
               {/* <h2 className="text-3xl font-bold mb-8">All Projects</h2> */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {PROJECTS.map((project) => (
@@ -1166,7 +1166,7 @@ export default function Home() {
                 size="lg"
                 className="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:text-gray-900"
               >
-                Get a Website Revamp or Build a New Site
+                Get Revamp or Build a New Site
               </Button>
             </section>
           </div>
