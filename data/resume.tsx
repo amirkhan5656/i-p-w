@@ -682,3 +682,79 @@ export const DATA = {
     },
   ],
 } as const;
+
+
+export const PROJECTS = [
+    {
+      id: 1,
+      title: "Modern E-commerce Website",
+      description:
+        "A fully responsive e-commerce website with product catalog, shopping cart, and checkout functionality.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Development",
+      technologies: ["Next.js", "Tailwind CSS", "Stripe API"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Restaurant Ordering System",
+      description:
+        "An online ordering system for a local restaurant with menu management and order tracking.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Application",
+      technologies: ["React", "Node.js", "MongoDB"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "Personal Finance Dashboard",
+      description:
+        "A dashboard for tracking personal finances, expenses, and savings goals with data visualization.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Application",
+      technologies: ["React", "Chart.js", "Firebase"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "Fitness Tracking App",
+      description:
+        "A mobile-responsive web app for tracking workouts, progress, and fitness goals.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Application",
+      technologies: ["React", "Tailwind CSS", "Local Storage API"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: false,
+    },
+    {
+      id: 5,
+      title: "Photography Portfolio",
+      description:
+        "A minimalist portfolio website for a professional photographer with image galleries and contact form.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Development",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: false,
+    },
+    {
+      id: 6,
+      title: "Blog Platform",
+      description:
+        "A custom blog platform with content management system, user authentication, and commenting features.",
+      image: "/placeholder.svg?height=600&width=800",
+      category: "Web Development",
+      technologies: ["Next.js", "Prisma", "PostgreSQL"],
+      demoUrl: "#",
+      codeUrl: "#",
+      featured: false,
+    },
+  ] as const;
