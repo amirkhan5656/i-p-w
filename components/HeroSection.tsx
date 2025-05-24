@@ -82,7 +82,7 @@ export function HeroSection() {
           {/* Image */}
           <div className="relative w-full h-80 sm:h-96 md:h-[400px] rounded-lg overflow-hidden shadow-xl animate-fade-in-up animation-delay-900">
             <Image
-              src="/placeholder.svg?height=600&width=600"
+              src="/profile.png?height=600&width=600"
               alt="Fullstack developer working on modern web applications"
               fill
               className="object-cover"
