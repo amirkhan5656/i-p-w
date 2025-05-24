@@ -126,9 +126,9 @@ export default function Home() {
     }
   };
   return (
-    <main className="flex flex-col min-h-screen px-6 md:px-8">
+    <main className="flex flex-col min-h-screen px-2 md:px-8">
       <HeroSection />
-      <div className="mx-auto max-w-6xl">
+      <div className="sm:mx-auto max-w-6xl">
         {/* About Me Section */}
         <section id="about" className="mx-2">
           {/* Hero Section */}
